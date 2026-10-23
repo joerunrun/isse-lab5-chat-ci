@@ -30,3 +30,6 @@ jobs:
 
       - name: Run tests and check coverage
         run: python -m pytest -q --cov=app --cov-report=term-missing --cov-fail-under=70
+
+      - name: Run smoke test
+        run: python scripts/smoke_test.py
