@@ -111,7 +111,7 @@ def delete_message(message_id):
     if record is None:
         return jsonify({"error": "聊天记录不存在"}), 404
 
-    # Lab5 regression experiment: intentionally leave the record in memory.
+    messages.remove(record)
     return "", 204
 
 
